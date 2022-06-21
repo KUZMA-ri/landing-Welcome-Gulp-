@@ -1,0 +1,54 @@
+/* ...................................ABOUT....................................... */
+.section-about__text{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.section-about__text-about{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+}
+.section-about___cards{
+    padding-top: 40px;
+}
+.section-about{
+    padding: 50px 0;
+}
+.section-about__team-card{
+    background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 42px;
+}
+.section-about__team-card:hover{
+    box-shadow: #95E1D3 16px 16px;
+    transform: translate(-20px, -20px);
+    transition: 0.5s linear;
+    
+}
+.section-about__team-icon{
+    width: 30px;
+    height: 36px;
+}
+.section-about__ourteam{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+    cursor: pointer;
+}
+.section-about__image{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    max-height: 338px;
+}

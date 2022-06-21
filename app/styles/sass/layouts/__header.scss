@@ -1,0 +1,114 @@
+/* .................................Promo HEADER................................. */
+.header_has-bg{
+    background:  #F38281;;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;    
+    padding: 0 15px;
+} 
+.header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 0 15px;
+    z-index: 100;
+
+    &__container{
+        max-width: 1200px;
+        margin: 0 auto;    
+        padding-top: 42px;
+        padding-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo-img{
+        width: 97px;
+        height: 26px;
+        left: 11.26%;
+        right: 82.28%;
+    }
+    &__menu{
+        display: flex;
+        align-items: flex-end;
+    }
+    &__menu-list{
+        list-style: none;
+        text-decoration: none;
+        font-family: 'Raleway';
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+
+        &:hover{
+            color: #F4BF87;
+            text-decoration: underline;
+        }
+    }
+    &__menu-item{
+        margin-right: 60px;
+
+        &_active .header__menu-list{
+            margin-right: 60px;
+            color: #F4BF87;
+        }
+    }
+    &__burger{
+        display: none;
+
+        @include breakpoint(md) {
+            display: flex;
+            margin-left: auto;
+        }
+    }
+    &__nav{
+        @include breakpoint(md) {
+            display: none;
+            }
+
+        &_opened{
+            @include breakpoint(md) {
+                display: block;  
+                position: fixed;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;  
+                background-image: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%), url("../../images/dist/Rectangle2.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                
+                .header__menu{
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+
+                    & li, a{
+                        margin-bottom: 50px;
+                        margin-right: 0;
+                        color: #FFFFFF;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header__menu-item_active .header__menu-list::after{
+    content: "";
+    position: absolute;
+    background: currentColor;
+    width: 150%;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+}

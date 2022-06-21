@@ -1,0 +1,15 @@
+.partners {
+    padding: 70px 0;
+    background: #F8F8F8;
+
+    &__images{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__link{
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}

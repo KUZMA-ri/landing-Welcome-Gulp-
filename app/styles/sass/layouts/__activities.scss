@@ -1,0 +1,63 @@
+/* ...................................ACTIVITIES.................................. */
+.activities{
+    padding: 67px 0 114px 0;
+}
+.activities__head-text{
+    text-align: center;
+    margin-bottom: 42px;
+}
+.activities-text{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+}
+.activities__container{
+    display: flex;
+    padding: 15px;
+}
+@media screen and (max-width: 768px){
+    .activities__container{
+        flex-direction: column;
+    }
+    
+}
+.activities__content{
+    margin-left: 30px;
+    max-width: 570px;
+    max-height: 483px;
+    width: 100%;
+}
+.activities___photo{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    max-height: 409px;
+}
+.activities__button{
+    display: flex;
+    align-items: center;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+}
+
+.activities__panel{
+    max-height: 163px;
+    overflow-y: scroll;
+    margin: 15px 5px;
+}
+.activities__button-img{
+    margin-right: 42px;
+}
+.activities__panel-text{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+}

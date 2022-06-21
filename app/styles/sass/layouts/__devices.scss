@@ -1,0 +1,31 @@
+/* ..................................DEVICES...................................... */
+.devices{
+    width: 100%;
+    background: linear-gradient(360deg,rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 100%), url("../images/dist/devices/devices-bg.jpg"), no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 100px 0;
+}
+.devices__other-devices{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto 40px auto;
+    width: calc(100% / 2);
+}
+.devices__i-pad{
+    position: absolute;
+    width: 100%;
+    max-width: 35.55em;
+    max-height: 27.44em;
+    border: 15px solid black;
+    border-radius: 20px;
+}
+.devices__mobile{
+    position: relative;
+    max-width: 10.38em;
+    max-height: 21.83em;
+    left: 45%;
+    transform: translateY(45%);
+    z-index: 5;
+}

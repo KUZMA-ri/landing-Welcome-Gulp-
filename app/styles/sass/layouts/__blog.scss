@@ -1,0 +1,139 @@
+/* ...................................Latest blog......................... */
+.blog{
+    display: flex;
+    padding: 84px 0;
+}
+.blog__cards{
+    display: flex;
+}
+.blog__card{
+    display: flex;
+    flex-direction: column;
+    margin-top: 42px;
+}
+.blog__img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    max-height: 253px;
+    margin-bottom: 30px;
+}
+@media (max-width: 1200px){
+    .blog__img{
+        max-height: 214px;
+        margin-bottom: 0;
+    }
+}
+.blog__news-date{
+    position: relative;
+    top: -40%;
+    left:-3%;
+    max-width: 80px;
+    max-height: 80px;
+    background-color: #95E1D3;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    text-transform: uppercase;
+}
+@media (max-width: 1200px){
+    .blog__news-date{
+        width: 67px;
+        height: 67px;
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
+.blog__new-date_month{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+}
+@media (max-width: 1200px){
+    .blog__new-date_month{
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+.blog__card-title{
+    color: black;
+    text-decoration: none;
+    top: auto;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 28px;
+    text-transform: uppercase;
+}
+@media (max-width: 1200px){
+    .blog__card-title{
+        font-size: 18px;
+        line-height: 21px;
+    }
+}
+.blog__card-title:hover{
+    border-bottom: 2px solid #F38281;
+}
+.blog__card-descr{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+@media (max-width: 1200px){
+    .blog__card-descr{
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+.blog__info-panel{
+    display: flex;
+    margin-top: auto;
+}
+.blog__view{
+    margin-right: 91px;
+    display: flex;
+    align-items: center;
+}
+.blog__comments{
+    display: flex;
+    align-items: center;
+}
+.blog__view-quantity{
+    margin-left: 17px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+}
+.blog__comments-quantity{
+    margin-left: 17px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+}
+.blog__card-info{
+    display: flex;
+    flex-direction: column;
+    margin-top: 42px;
+    width: calc(100% / 3 - 15px);
+    margin-right: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}

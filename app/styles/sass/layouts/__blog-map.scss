@@ -1,0 +1,21 @@
+/*..................................Latest Blog Map........................... */
+.blog-map{
+    padding: 42px 15px 20px 15px;
+    background: linear-gradient(rgba(255, 255, 255, 0.9)0%, rgba(255, 255, 255, 0.7)100%), url('../images/dist/footer/map.jpg') no-repeat center;
+    background-size: cover;
+}
+.blog-map__title{
+    margin-top: 20px;
+    color: #F38281;
+}
+@media (max-width: 560px){
+    .blog-map__title{
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .section-head__title:after{
+        max-width: 134px;
+        margin: 40px auto 40px auto;
+    }
+}
