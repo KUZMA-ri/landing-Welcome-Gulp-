@@ -1,63 +1,92 @@
 /* ...................................ACTIVITIES.................................. */
 .activities{
     padding: 67px 0 114px 0;
-}
-.activities__head-text{
-    text-align: center;
-    margin-bottom: 42px;
+
+    @include breakpoint(xl) {
+        padding: 88px 0;
+    }
+    @include breakpoint(sm) {
+        padding: 52px 0 31px 0;
+    }
+    
+    &__head-text{
+        text-align: center;
+        margin-bottom: 42px;
+    }
+
+    &__container{
+        display: flex;
+        padding: 15px;
+
+        @include breakpoint(md) {
+            flex-direction: column;
+        }
+    }
+    &__content{
+        margin-left: 30px;
+        max-width: 570px;
+        max-height: 483px;
+        width: 100%;
+
+        @include breakpoint(md) {
+            margin: 0 auto;
+        }
+    }
+
+    &___photo{
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        max-height: 409px;
+
+        @include breakpoint(md) {
+            margin-bottom: 29px;
+        }
+    }
+
+    &__button{
+        display: flex;
+        align-items: center;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.17em;
+        text-transform: uppercase;
+
+        @include breakpoint(xl) {
+            font-size: 18px;
+        }
+    }
+    &__panel{
+        max-height: 163px;
+        overflow-y: scroll;
+        margin: 15px 5px;
+    }
+    &__button-img{
+        margin-right: 42px;
+    }
+    &__panel-text{
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+
+        @include breakpoint(xl) {
+            font-size: 14px;
+        }
+    }
+    
 }
 .activities-text{
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 21px;
-}
-.activities__container{
-    display: flex;
-    padding: 15px;
-}
-@media screen and (max-width: 768px){
-    .activities__container{
-        flex-direction: column;
-    }
-    
-}
-.activities__content{
-    margin-left: 30px;
-    max-width: 570px;
-    max-height: 483px;
-    width: 100%;
-}
-.activities___photo{
-    display: block;
-    width: 100%;
-    object-fit: cover;
-    max-height: 409px;
-}
-.activities__button{
-    display: flex;
-    align-items: center;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 28px;
-    text-transform: uppercase;
-}
+    line-height: 1.17em;
 
-.activities__panel{
-    max-height: 163px;
-    overflow-y: scroll;
-    margin: 15px 5px;
-}
-.activities__button-img{
-    margin-right: 42px;
-}
-.activities__panel-text{
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
+    @include breakpoint(xl) {
+        font-size: 16px;
+    }
 }

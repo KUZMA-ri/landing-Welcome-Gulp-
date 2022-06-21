@@ -2,58 +2,74 @@
 
 .services {
     padding: 42px 0;
-}
-@media screen and (max-width: 1024px) {
-    .services{
+
+    @include breakpoint(xl) {
         padding: 58px 15px;
     }
-    
-}
 
-.services__card{
-    display: flex;
-    margin-bottom: 148px;
-}
+    &__card{
+        display: flex;
+        margin-bottom: 148px;
 
-.services__img{
-    margin-right: 30px;
-    width: 70px;
-    height: 70px;
-}
-@media screen and (max-width: 1024px) {
-    .services__img{
-        width: 42px;
-        height: 42px;
+        @include breakpoint(xl) {
+            margin-bottom: 65px;
+        }
+        @include breakpoint(sm) {
+            justify-content: center;
+            margin-bottom: 42px;
+        }
     }
-}
+    &__img{
+        margin-right: 30px;
+        width: 70px;
+        height: 70px;
 
-.services__card-name {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 28px;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-}
-@media screen and (max-width: 1024px) {
-    .services__card-name{
+        @include breakpoint(xl) {
+            margin-right: 28px;
+            width: 42px;
+            height: 42px;
+        }
+
+        @include breakpoint(sm) {
+            margin-right: 22px;
+            width: 50px;
+            height: 50px;
+        }
+    }
+    &__card-name {
+        font-family: 'Raleway';
+        font-style: normal;
         font-weight: 700;
+        font-size: 24px;
+        line-height: 1.17em;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+
+        @include breakpoint(xl) {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 1.17em;
+        }
+
+        @include breakpoint(md) {
+            margin-bottom: 25px;
+        }
+        @include breakpoint(sm) {
+            margin-bottom: 15px;
+        }
+
+    }
+    &__card-desk {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 400;
         font-size: 18px;
         line-height: 21px;
-    }
-}
-.services__card-desk {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-}
-@media screen and (max-width: 1024px){
-    .services__card-desk{
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 16px;
+
+        @include breakpoint(xl) {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+        }
     }
 }

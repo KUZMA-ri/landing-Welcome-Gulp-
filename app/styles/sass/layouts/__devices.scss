@@ -5,27 +5,39 @@
     background-attachment: fixed;
     background-size: cover;
     padding: 100px 0;
-}
-.devices__other-devices{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto 40px auto;
-    width: calc(100% / 2);
-}
-.devices__i-pad{
-    position: absolute;
-    width: 100%;
-    max-width: 35.55em;
-    max-height: 27.44em;
-    border: 15px solid black;
-    border-radius: 20px;
-}
-.devices__mobile{
-    position: relative;
-    max-width: 10.38em;
-    max-height: 21.83em;
-    left: 45%;
-    transform: translateY(45%);
-    z-index: 5;
+    
+    &__other-devices{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto 40px auto;
+        width: calc(100% / 2);
+    }
+
+    &__i-pad{
+        position: absolute;
+        width: 100%;
+        max-width: 35.55em;
+        max-height: 27.44em;
+        border: 15px solid black;
+        border-radius: 20px;
+
+        @include breakpoint(xl) {
+            max-width: 24.8em;
+            max-height: 18.6em;
+        }
+    }
+    &__mobile{
+        position: relative;
+        max-width: 10.38em;
+        max-height: 21.83em;
+        left: 45%;
+        transform: translateY(45%);
+        z-index: 5;
+
+        @include breakpoint(xl) {
+            max-width: 7.5em;
+            max-height: 15.55em;
+        }
+    }
 }
