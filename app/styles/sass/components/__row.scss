@@ -81,9 +81,14 @@
         width: calc(100% / 12 * 6 - var(--gutter) * 2);
         margin: 0 var(--gutter);
     }
+
 }
 /* sm */
 @media (max-width: 768px){
+    .col-md-12{
+        width: calc(100% / 12 * 12 - var(--gutter) * 2);
+        margin: 0 var(--gutter);
+    }
     .col-sm-6{
         width: calc(100% / 12 * 6 - var(--gutter) * 2);
         margin: 0 var(--gutter);

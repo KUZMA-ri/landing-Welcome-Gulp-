@@ -2,7 +2,7 @@
 
 .promo{
     min-height: 100vh;
-    background-image: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%), url("../../images/dist/Rectangle2.jpg");
+    background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%), url("../../images/dist/Rectangle2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -113,6 +113,8 @@
         &:hover{
             background: #FFFFFF;
             color:#E4BE8D;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(150, 113, 113, 0.2);
         }
 
         &:focus{
@@ -121,4 +123,42 @@
             color: #E4BE8D;
         }
     }
+    &__pagination{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 116px;
+
+        li{
+            width: 22%;
+        }
+
+        button{
+            background-color: transparent;
+            border: none;
+            width: 100%;
+            font-size: 36px;
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 1.17em;
+            color: #FFFFFF;
+            text-transform: uppercase;
+
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+
+        button::before{
+            content: '';
+            display: block;
+            margin-bottom: 10px;
+            height: 4px;
+            width: 100%;
+            background-color: #fff;
+        }
+    }
 }
+
+

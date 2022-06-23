@@ -4,10 +4,27 @@
 
     &__images{
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
         align-items: center;
+
+        &:first-child{
+            margin-left: 0;
+        }
     }
     &__link{
+        margin-left: 80px;
+        max-width: 127px;
+        max-height: 127px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include breakpoint(xl) {
+            max-width: 86px;
+            max-height: 86px;
+            margin-bottom: 30px;
+        }
+
         &:last-child{
             margin-right: 0;
         }

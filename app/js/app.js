@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 	// Accordion start----------------------------------------------
-	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 	var acc = document.getElementsByClassName("accordion-button");
 	var i;
 	
@@ -40,13 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		});
 	};
-	// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 	// Accordion end------------------------------------------------
 	// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 	
 	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 	// Scroll start-------------------------------------------------
-	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 	(function () {
 	
 		const smoothScroll = function (targetEl, duration) {
@@ -85,13 +82,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		};
 		scrollTo();
 	}());
-// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 // Scroll end-------------------------------------------------------
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // Slider start-----------------------------------------------------
-// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 	new Splide( "#comments-slider", {
 		type: "loop",
 		gap: "40px",
@@ -128,13 +123,58 @@ document.addEventListener('DOMContentLoaded', () => {
 			},
 	}
 	} ).mount();
-// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+	// Promo Slider
+	const promoSlides = document.querySelectorAll('[data-slide-title]');
+
+	let slideTitles = [];
+
+	promoSlides.forEach(function(slide) {
+		slideTitles.push(slide.dataset.slideTitle);
+	});
+	console.log(slideTitles);
+
+	const promoSlider = new Splide( ".promo__slider", {
+		type: "loop",
+		gap: "40px",
+	
+		pagination: true,
+		arrows: false,
+		drag: false,
+		autoplay: true,
+		classes: {
+			arrow : 'splide__arrow comments-slider__arrow',
+			pagination: 'splide__pagination promo__pagination',
+		},
+		
+		breakpoints: {
+			560: {
+				arrows: false,
+				pagination: true,	
+				classes: {
+					pagination: 'splide__pagination promo__pagination',
+				},
+			},
+	}
+	});
+
+	promoSlider.on( 'pagination:mounted', function ( data ) {
+		// You can add your class to the UL element
+		data.list.classList.add( 'splide__pagination--custom' );
+
+		// `items` contains all dot items
+		data.items.forEach( function ( item ) {
+		// item.button.textContent = String( item.page + 1 );
+		item.button.textContent = `${slideTitles[item.page]}`;
+		} );
+	} );
+	
+	promoSlider.mount();
 // Slider end----------------------------------------------------------
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-// Mobile menu start--------------------------------------------------------
-// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//M O B I L E  M E N U  S T A R T
 const headerBurger = document.querySelector(".header__burger");
 const headerNav = document.querySelector(".header__nav");
 
@@ -142,8 +182,7 @@ headerBurger.addEventListener("click", function(event){
 	headerBurger.classList.toggle("burger_closed");
 	headerNav.classList.toggle("header__nav_opened");
 });
-// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-// Mobile menu end
+// M O B I L E  M E N U  E N D
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 

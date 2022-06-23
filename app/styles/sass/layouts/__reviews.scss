@@ -3,94 +3,95 @@
     padding: 80px 0 50px 0;
     background: linear-gradient(rgba(255, 255, 255, 0.9)0%, rgba(255, 255, 255, 0.8)100%),  url('../images/dist/reviews/bg.jpg') no-repeat;
     background-size: cover;
-}
-.reviews__cards{
-    margin-top: 42px;
-}
-@media (max-width: 1200px){
-    .reviews__cards{
-        margin-top: 28px;
-    }
-}
-.reviews__card{
-    display: flex;
-}
-@media (max-width: 560px){
-    .reviews__card{
-        flex-direction: column;
-        /* justify-content: center; */
-        align-items: center;
-    }
-}
 
-@media (max-width: 1200px){
-    .reviews__img{
-        max-width: 88px;
-        max-height: 88px;
+    &__cards{
+        margin-top: 42px;
+        @include breakpoint(xl) {
+            margin-top: 28px;
+        }
     }
-}
-.reviews__content{
-    padding: 0 50px;
-}
-@media (max-width: 1200px){
-    .reviews__content{
-        padding: 0 48px;
-    }
-}
-@media (max-width: 560px){
-    .reviews__content{
-        margin-top: 20px;
-        justify-content: center;
-        align-items: center;
-    }
-}
-.reviews__card{
-    margin-bottom: 60px;
-}
+    &__card{
+        display: flex;
 
-.reviews__title{
-    margin-bottom: 10px;
-}
-@media (max-width: 1200px){
-    .reviews__title{
-        font-size: 18px;
-        line-height: 21px;
-    }
-}
-.reviews__subtitle:after{
-    margin-top: 32px;
-}
-@media (max-width: 1200px){
-    .reviews__subtitle:after{
-        max-width: 47px;
-        margin-top: 21px;
-    }
-}
-@media (max-width: 560px){
-    .reviews__subtitle:after{
-        margin: 20px auto 0 auto;
-        max-width: 134px;
-    }
-}
+        @include breakpoint(md) {
+            align-items: center;
+            justify-content: center;
+        }
 
-@media (max-width: 1200px){
-    .reviews__subtitle{
-        font-size: 14px;
-        line-height: 16px;
+        @include breakpoint(sm) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
-}
-.reviews__text{
-    margin-top: 32px;
-}
-@media (max-width: 1200px){
-    .reviews__text{
-        font-size: 14px;
-        line-height: 16px;
-        margin-top: 40px;
+    &__img{
+        @include breakpoint(xl) {
+            max-width: 88px;
+            max-height: 88px;
+        }
     }
-}
-@media (max-width: 560px){
-    .reviews__text{
-        text-align: center;
+    &__content{
+        padding: 0 50px;
+
+        @include breakpoint(xl) {
+            padding: 0 48px;
+        }
+
+        @include breakpoint(md) {
+        width: 70%;
+        }
+
+        @include breakpoint(sm) {
+            width: 100%;
+            margin-top: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__card{
+        margin-bottom: 60px;
+    }
+
+    &__title{
+        margin-bottom: 10px;
+
+        @include breakpoint(xl) {
+            font-size: 18px;
+            line-height: 21px;
+        }
+    }
+
+    &__subtitle{
+        @include breakpoint(xl) {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+
+    &__subtitle:after{
+        margin-top: 32px;
+
+        @include breakpoint(xl) {
+            max-width: 47px;
+            margin-top: 21px;
+        }
+
+        @include breakpoint(sm) {
+            margin: 20px auto 0 auto;
+            max-width: 134px;
+        }
+    }
+
+    &__text{
+        margin-top: 32px;
+
+        @include breakpoint(xl) {
+            font-size: 14px;
+            line-height: 16px;
+            margin-top: 40px;
+        }
+        @include breakpoint(sm) {
+            text-align: center;
+        }
     }
 }
