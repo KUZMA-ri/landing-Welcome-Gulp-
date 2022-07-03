@@ -1,3 +1,4 @@
+
 /* **************************** */
 /* Component Section-head  start*/
 /* **************************** */
@@ -5,51 +6,61 @@
     display: flex;
     flex-direction: column;
     align-items: center; 
-}
-.section-head__subtitle {
-    font-family: 'Kaushan Script';
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 44px;
-    margin-bottom: 25px;
-}
-@media (max-width: 1200px){
-    .section-head__subtitle{
-        font-size: 24px;
-        line-height: 35px;
+    
+    &__subtitle {
+        font-family: 'Kaushan Script';
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 44px;
+        margin-bottom: 25px;
+
+        @include breakpoint(xl) {
+            font-size: 24px;
+            line-height: 35px;
+        }
     }
-}
-.section-head__title {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 36px;
-    line-height: 42px;
-    text-transform: uppercase;
-    margin-bottom: 24px;
-}
-@media (max-width: 1200px){
-    .section-head__title{
-        font-size: 24px;
-        line-height: 28px;
+
+    &__title {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 42px;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+
+        @include breakpoint(xl) {
+            font-size: 24px;
+            line-height: 28px;
+        }
+        &:after{
+            content: "";
+            display: block;
+            max-width: 170px;
+            border: 2px solid #F38281;
+            background: #F38281;
+            margin: 40px auto 40px auto;
+
+            @include breakpoint(xl) {
+                max-width: 148px;
+            }
+
+            @include breakpoint(md) {
+                max-width: 134px;
+            }
+        }
     }
-}
-.section-head__title:after{
-    content: "";
-    display: block;
-    max-width: 170px;
-    border: 2px solid #F38281;
-    background: #F38281;
-    margin: 40px auto 40px auto;
-}
-@media (max-width: 1200px){
-    .section-head__title:after{
-        max-width: 148px;
-    }
-}
-@media (max-width: 560px){
-    .section-head__title:after{
-        max-width: 134px;
+    &__text{
+        text-align: center;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.17em;
+    
+        @include breakpoint(xl) {
+            font-size: 16px;
+        }
     }
 }
 /* ************************** */

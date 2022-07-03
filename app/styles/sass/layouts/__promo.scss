@@ -145,6 +145,13 @@
             color: #FFFFFF;
             text-transform: uppercase;
 
+            @include breakpoint(xl) {
+                font-size: 18px;
+            }
+            @include breakpoint(md) {
+                font-size: 0px;
+            }
+
             &:hover{
                 opacity: 0.8;
             }
@@ -160,5 +167,6 @@
         }
     }
 }
+
 
 

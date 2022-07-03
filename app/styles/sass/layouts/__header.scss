@@ -1,12 +1,4 @@
 /* .................................Promo HEADER................................. */
-.header_has-bg{
-    background:  #F38281;;
-}
-.container{
-    max-width: 1200px;
-    margin: 0 auto;    
-    padding: 0 15px;
-} 
 .header{
     position: fixed;
     top: 0;
@@ -101,14 +93,17 @@
             }
         }
     }
+    &__menu-item_active .header__menu-list::after{
+        content: "";
+        position: absolute;
+        background: currentColor;
+        width: 150%;
+        left: 50%;
+        bottom: -5px;
+        transform: translateX(-50%);
+    }
+}
+.header_has-bg{
+    background:  #F38281;
 }
 
-.header__menu-item_active .header__menu-list::after{
-    content: "";
-    position: absolute;
-    background: currentColor;
-    width: 150%;
-    left: 50%;
-    bottom: -5px;
-    transform: translateX(-50%);
-}

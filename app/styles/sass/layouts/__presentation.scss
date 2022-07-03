@@ -9,17 +9,7 @@
     }
     
     &__text{
-        font-family: 'Raleway';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 1.17em;
-        text-align: center;
         margin-bottom: 80px;
-
-        @include breakpoint(xl) {
-            font-size: 14px;
-        }
     }
 
     &__image{
@@ -28,6 +18,21 @@
         object-fit: cover;
         transition: opacity .2s linear;
     }
+
+    &__bg{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        transform: translate3d(0, -50%, 0);
+        width: 100%;
+        opacity: 0;
+        transition: opacity .2s linear;
+    }
+
+
 
     &__gallery-items{
         display: grid;
@@ -49,97 +54,8 @@
         &:hover .presentation__image{
             opacity: .1;
         }
-        &:hover .presentation__gallery-item_hover{
+        &:hover .presentation__bg{
             opacity: 1;
         }
-        &_hover{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            top: 50%;
-            transform: translate3d(0, -50%, 0);
-            width: 100%;
-            opacity: 0;
-            transition: opacity .2s linear;
-        }
     }
 }
-
-.gallery-item{
-    &__image_hover{
-        max-width: 36px;
-        max-height: 32px;
-        margin-bottom: 61px;
-
-        @include breakpoint(xl) {
-            max-width: 24px;
-            max-height: 24px;
-            margin-bottom: 41px;
-        }
-
-        @include breakpoint(md) {
-            margin-bottom: 20px;
-        }
-        @include breakpoint(sm) {
-            display: none;
-        }
-    }
-    &__title_hover{
-        font-family: 'Raleway';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28px;
-        text-transform: uppercase;
-        color: #FFFFFF;
-        margin-bottom: 15px;
-        text-align: center;
-
-        @include breakpoint(xl) {
-            font-size: 18px;
-        }
-
-        @include breakpoint(md) {
-            font-size: 16px;
-        }
-
-        @include breakpoint(sm) {
-            display: none;
-        }
-
-    }
-    &__text{
-        font-family: 'Raleway';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 1.17em;
-        color: #FFFFFF;
-        text-align: center;
-
-        @include breakpoint(xl) {
-            font-size: 14px;
-        }
-
-        @include breakpoint(md) {
-            font-size: 12px;
-        }
-        
-        @include breakpoint(sm) {
-            display: none;
-        }
-    }
-}
-.gallery-item_big {
-    grid-column: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
-
-    @include breakpoint(sm) {
-        grid-column: 2;
-        grid-row-start: 1;
-        grid-row-end: 4;
-    }
-}  

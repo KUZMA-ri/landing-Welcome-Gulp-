@@ -11,7 +11,7 @@
         padding: 29px 0;
     }
 
-    &__head-title{
+    &__title{
         margin-bottom: 0;
     }
 
@@ -95,10 +95,10 @@
             font-size: 18px;
             line-height: 1.17em;
         }
-    }
 
-    &__card-title:hover{
-        border-bottom: 2px solid #F38281;
+        &:hover{
+            border-bottom: 2px solid #F38281;
+        }
     }
 
     &__card-descr{

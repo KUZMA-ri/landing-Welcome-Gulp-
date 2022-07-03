@@ -1,0 +1,92 @@
+.news-card {
+    display: flex;
+    margin-bottom: 20px;
+    
+    &:last-child{
+        margin-bottom: 0;
+    }
+
+    &__link{
+        width: 100%;
+    }
+
+    &__img {
+        width: 100%;
+        max-width: 170px;
+        max-height: 105px;
+        object-fit: cover;
+        transition: 0.3s;
+
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0 30px;
+    }
+
+    &__title {
+        position: relative;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        text-transform: uppercase;
+        transition: 0.2s;
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: -3px;
+            width: 0;
+            height: 2px; 
+            background-color: black; 
+            transition: width 0.5s; 
+        }
+
+        &:hover:after{
+            content: "";
+            width: 100%;
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            height: 2px; 
+            background-color: #F38281;
+            transition: width 0.5s; 
+        }
+
+        @include breakpoint(xl) {
+            font-size: 14px;
+            line-height: 16px
+        }
+    }
+
+    &__title-link{
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &__date {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 15px;
+        display: flex;
+        align-items: center;
+        color: #2D3033;
+
+        @include breakpoint(xl) {
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+}

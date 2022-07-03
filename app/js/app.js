@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	document.addEventListener("scroll", () => {
 		if (document.documentElement.scrollTop > 1) {
 		header.classList.add("header_has-bg");
+
 		} else {
 		header.classList.remove("header_has-bg");
 		}
@@ -21,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 	// Accordion start----------------------------------------------
-	var acc = document.getElementsByClassName("accordion-button");
+	var acc = document.getElementsByClassName("accordion__button");
 	var i;
 	
 	for (i = 0; i < acc.length; i++) {
@@ -150,7 +151,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		breakpoints: {
 			560: {
 				arrows: false,
-				pagination: true,	
+				pagination: false,
+				drag: true,	
 				classes: {
 					pagination: 'splide__pagination promo__pagination',
 				},
